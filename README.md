@@ -24,27 +24,36 @@ npm install spotify-to-ytmusic
 
 ## Example
 
+### Import
+
+- CommonJS
+
 ```javascript
 const SpotifyToYoutubeMusic = require('spotify-to-ytmusic')
+```
 
-async function example() {
+- ES6
 
-    // Set Spotify Credentials
+```typescript
+import SpotifyToYoutubeMusic from 'spotify-to-ytmusic';
+```
 
-    const spotifyToYoutubeMusic = await SpotifyToYoutubeMusic({
-        clientID: "CLIENT_ID",
-        clientSecret: "CLIENT_SECRET",
-        accessToken: "ACCESS_TOKEN", // Optional
-        ytMusicUrl: true // Optional
-    })
+### Usage
 
-    // Convert a Spotify Track
+```javascript
+// Set Spotify Credentials
 
-    let song = await spotifyToYoutubeMusic('4cOdK2wGLETKBW3PvgPWqT')
-    console.log(song) // https://music.youtube.com/watch?v=lYBUbBu4W08
-}
+const spotifyToYoutubeMusic = await SpotifyToYoutubeMusic({
+    clientID: "CLIENT_ID",
+    clientSecret: "CLIENT_SECRET",
+    accessToken: "ACCESS_TOKEN", // Optional
+    ytMusicUrl: true // Optional
+})
 
-example()
+// Convert a Spotify Track
+
+let song = await spotifyToYoutubeMusic('4cOdK2wGLETKBW3PvgPWqT')
+console.log(song) // https://music.youtube.com/watch?v=lYBUbBu4W08
 ```
 
 ## Other ways to provide a Spotify Track
@@ -64,3 +73,5 @@ await spotifyToYoutubeMusic('4cOdK2wGLETKBW3PvgPWqT')
 ```javascript
 await spotifyToYoutubeMusic(['4cOdK2wGLETKBW3PvgPWqT','06JvOZ39sK8D8SqiqfaxDU'])
 ```
+
+*This package is a TypeScript adaptation of [itsgox/spotify-to-ytmusic](https://github.com/itsgox/spotify-to-ytmusic)*
