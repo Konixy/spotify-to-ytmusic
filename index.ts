@@ -9,9 +9,9 @@ export default async function SpotifyToYouTubeMusic({
 }: {
   clientID: string;
   clientSecret: string;
-  accessToken: string;
-  ytMusicUrl: string;
-}): Promise<(spotifyID: string | string[]) => Promise<string[] | null>> {
+  accessToken?: string;
+  ytMusicUrl?: boolean;
+}): Promise<(spotifyID: string | string[]) => Promise<string[] | string | null>> {
   // Check Client ID & Client Secret
 
   if (!clientID) throw new Error('You need to provide a Client ID');

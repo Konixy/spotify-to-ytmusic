@@ -43,7 +43,7 @@ import SpotifyToYoutubeMusic from 'spotify-to-ytmusic';
 ```javascript
 // Set Spotify Credentials
 
-const spotifyToYoutubeMusic = await SpotifyToYoutubeMusic({
+const spotifyToYoutubeMusic = SpotifyToYoutubeMusic({
     clientID: "CLIENT_ID",
     clientSecret: "CLIENT_SECRET",
     accessToken: "ACCESS_TOKEN", // Optional
